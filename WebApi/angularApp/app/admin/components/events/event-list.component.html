@@ -1,0 +1,95 @@
+﻿<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Form Stuff</a></li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Event List<small> All Events.</small></h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-md-12">
+            <!-- begin panel -->
+            <div class="panel panel-inverse" [ngClass]="{'panel-expand': exapnd}" data-sortable-id="form-validation-1">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" (click)="exapnd =!exapnd"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" (click)="show =!show"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Event List</h4>
+                </div>
+                <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a Event="button" [routerLink]="['/admin/addEvent','']" class="btn btn-primary pull-right">Add Event</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p-dataTable [value]="events"
+                                         [rows]="10"
+                                         [paginator]="true"
+                                         [pageLinks]="3"
+                                         [rowsPerPageOptions]="[5,10,20]"
+                                         selectionMode="single"
+                                         [(selection)]="selectedEvent">
+                                <p-column field="Name" header="Event Name" [sortable]="true"></p-column>
+                                <p-column field="Orgnizer" header="Orgnizer" [sortable]="true"></p-column>
+                                <p-column field="EventType" header="Event Type" [sortable]="true"></p-column>
+                                <p-column field="Address" header="Address" [sortable]="true"></p-column>
+                                <p-column field="EventStartTime" header="Start Time" [sortable]="true">
+                                    <template let-col let-data="rowData" pTemplate="body">
+                                        <span>{{data.EventStartTime | date: 'medium'}}</span>
+                                    </template>
+                                </p-column>
+                                <p-column field="EventEndTime" header="End Time" [sortable]="true">
+                                    <template let-col let-data="rowData" pTemplate="body">
+                                        <span>{{data.EventEndTime | date: 'medium'}}</span>
+                                    </template>
+                                </p-column>
+
+                                <p-column styleClass="col-button">
+                                    <ng-template let-eventDetail="rowData" pTemplate="body">
+                                        <a [routerLink]="['/admin/addevent',eventDetail.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+                                        <a (click)="deleteEvent(eventDetail)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
+                                    </ng-template>
+                                </p-column>
+                            </p-dataTable>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+
+    </div>
+    <!-- end row -->
+</div>
+
+<div bsModal #confirmationModal="bs-modal" class="modal fade" tabindex="-1" Event="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" (click)="hideConfirmation()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title semi-bold" align="center">{{ 'COMMON.CONFIRMATION' | translate }}</h4>
+            </div>
+            <div class="modal-body">
+                {{ 'COMMON.AREUSUREDELETE' | translate }}
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom" (click)="confirmDeleteUser()">{{ 'COMMON.YES' | translate }}</button>
+                <button type="button" class="btn btn-custom" (click)="hideConfirmation()" data-dismiss="modal">{{ 'COMMON.NO' | translate }}</button>
+            </div>
+        </div>
+    </div>
+</div>

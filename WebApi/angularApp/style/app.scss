@@ -1,0 +1,14 @@
+﻿.active{
+    display: block;
+}
+.deactive{
+    display: none;
+}
+control-messages div {
+  color: #E82C0C;
+  margin: 6px 0;
+}
+.input-group-addon:last-child {
+    border-left: 0;
+    padding: 9px !important;
+}

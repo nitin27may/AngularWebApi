@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Compile"  
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
+  <ItemGroup>   
+    <ExcludeFromPackageFolders Include="angularApp">
+      <FromTarget>WebApi.wpp.targets</FromTarget>
+    </ExcludeFromPackageFolders>   
+  <ExcludeFromPackageFiles Include="package.json;
+                           tsconfig-aot.json;
+                           tsconfig.json;
+                           tslint.json;
+                           webpack.config.js;
+                           webpack.dev.js;
+                           webpack.helpers.js;
+                           webpack.prod.js;
+                           WebApi.wpp.targets">
+  <FromTarget>WebApi.wpp.targets</FromTarget>
+  </ExcludeFromPackageFiles>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC60EFB4-D294-42A4-8298-F062AF649D99}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApi</RootNamespace>
+    <AssemblyName>WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.3\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.3\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.9\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.3\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="angularApp\app\admin\components\events\event-add.component.html" />
+    <Content Include="angularApp\app\admin\components\events\event-list.component.html" />
+    <Content Include="angularApp\app\admin\components\role\role-add.component.html" />
+    <Content Include="angularApp\app\admin\components\role\role-list.component.html" />
+    <Content Include="angularApp\app\admin\components\user\user-add.component.html" />
+    <Content Include="angularApp\app\admin\components\user\user-list.component.html" />
+    <Content Include="angularApp\app\app.component.html" />
+    <Content Include="angularApp\app\admin\admin.component.html" />
+    <Content Include="angularApp\app\shared\components\confirmation\confirmation.component.html" />
+    <Content Include="angularApp\app\shared\components\customfooter\customfooter.component.html" />
+    <Content Include="angularApp\app\shared\components\reset\forget.component.html" />
+    <Content Include="angularApp\app\shared\components\reset\reset.component.html" />
+    <Content Include="angularApp\app\shared\components\login\login.component.html" />
+    <Content Include="angularApp\app\shared\components\navigation\navigation.component.html" />
+    <Content Include="angularApp\app\shared\components\register\register.component.html" />
+    <Content Include="angularApp\app\shared\components\sidebar\sidebar.component.html" />
+    <Content Include="angularApp\app\shared\components\validation\control-message.component.html" />
+    <Content Include="angularApp\images\damienbod.jpg" />
+    <Content Include="angularApp\images\fabianGosebrink.jpg" />
+    <Content Include="angularApp\images\RobertoSimonetti.jpg" />
+    <Content Include="angularApp\index.html" />
+    <Content Include="angularApp\style\default.css" />
+    <Content Include="angularApp\style\home-spinner.css" />
+    <Content Include="angularApp\style\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Template\emailTemplate.html" />
+    <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
+    <Content Include="webpack.dev.js" />
+    <Content Include="webpack.helpers.js" />
+    <Content Include="webpack.prod.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\HttpActionResult.cs" />
+    <Compile Include="Common\LogWriter.cs" />
+    <Compile Include="Common\ManageToken.cs" />
+    <Compile Include="Common\SendEmail.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Filters\ApiLogHandler.cs" />
+    <Compile Include="Filters\CustomAuthorize.cs" />
+    <Compile Include="Filters\GlobalExceptionAttribute.cs" />
+    <Compile Include="Filters\LoggingFilterAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\JSONHelper.cs" />
+    <Compile Include="Helpers\NLogger.cs" />
+    <Compile Include="Helpers\ServiceStatus.cs" />
+    <Compile Include="Models\ApiLogEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="package.json" />
+    <Content Include="tsconfig-aot.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="angularApp\app\app.component.scss" />
+    <Content Include="angularApp\style\app.scss" />
+    <Content Include="angularApp\style\application.scss" />
+    <Content Include="angularApp\style\helper.scss" />
+    <Content Include="angularApp\style\mixins.scss" />
+    <Content Include="angularApp\style\variables.scss" />
+    <Content Include="angularApp\i18\en.json" />
+    <Content Include="angularApp\i18\fr.json" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
+    <Content Include="WebApi.wpp.targets" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataEntities\DataEntities.csproj">
+      <Project>{48132c43-1f2f-4fca-aed4-b170ecbbf670}</Project>
+      <Name>DataEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="angularApp\app\admin\components\events\event-add.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\components\events\event-list.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\components\role\role-add.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\components\role\role-list.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\components\user\user-add.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\components\user\user-list.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\app.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\app.constants.ts" />
+    <TypeScriptCompile Include="angularApp\app\app.module.ts" />
+    <TypeScriptCompile Include="angularApp\app\app.routes.ts" />
+    <TypeScriptCompile Include="angularApp\app\core\core.module.ts" />
+    <TypeScriptCompile Include="angularApp\app\core\services\api.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\admin.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\admin.module.ts" />
+    <TypeScriptCompile Include="angularApp\app\admin\admin.routes.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\confirmation\confirmation.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\customfooter\customfooter.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\reset\forget.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\reset\reset.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\login\login.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\navigation\navigation.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\register\register.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\sidebar\siderbar.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\validation\control-message.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\model\storage.enum.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\services\custom-toaster.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\services\loader.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\services\storage.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\services\validation.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\utils\auth.guard.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\utils\log.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\utils\orderBy.pipe.ts" />
+    <TypeScriptCompile Include="angularApp\main-aot.ts" />
+    <TypeScriptCompile Include="angularApp\main.ts" />
+    <TypeScriptCompile Include="angularApp\polyfills.ts" />
+    <TypeScriptCompile Include="angularApp\vendor.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9195</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9195/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <CompileDependsOn>
+    $(CompileDependsOn);
+    WebpackBuild;
+  </CompileDependsOn>
+  </PropertyGroup>
+  <Target Name="WebpackBuild" DependsOnTargets="CompileTypeScript">
+    <Exec Command="npm run webpack-dev" />
+  </Target>
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      CustomAssetsCollectFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      CustomAssetsCollectFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      CustomAssetsCollectFiles2;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      CustomAssetsCollectFiles2;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      IndexFile;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      IndexFile;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+  </PropertyGroup>
+  <Target Name="CustomAssetsCollectFiles">
+    <ItemGroup>
+      <_CustomFiles Include="$(MSBuildProjectDirectory)\Assets\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
+        <DestinationRelativePath>assets\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="CustomAssetsCollectFiles2">
+    <ItemGroup>
+      <_CustomFiles1 Include="$(MSBuildProjectDirectory)\dist\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFiles1.Identity)">
+        <DestinationRelativePath>dist\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="IndexFile">
+    <ItemGroup>
+      <_CustomFiles2 Include="index.html" />
+      <FilesForPackagingFromProject Include="%(_CustomFiles2.Identity)">
+        <DestinationRelativePath>index.html</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+</Project>

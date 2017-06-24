@@ -1,0 +1,81 @@
+﻿<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Form Stuff</a></li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Role List<small> All roles.</small></h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-md-12">
+            <!-- begin panel -->
+            <div class="panel panel-inverse" [ngClass]="{'panel-expand': exapnd}" data-sortable-id="form-validation-1">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" (click)="exapnd =!exapnd"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" (click)="show =!show"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Role List</h4>
+                </div>
+                <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a role="button" [routerLink]="['/admin/addrole','']" class="btn btn-primary pull-right">Add Role</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p-dataTable [value]="roles"
+                                         [rows]="10"
+                                         [paginator]="true"
+                                         [pageLinks]="3"
+                                         [rowsPerPageOptions]="[5,10,20]"
+                                         selectionMode="single"
+                                         [(selection)]="selectedRole">
+                                <p-column field="Name" header="Role Name" [sortable]="true"></p-column>
+                                <p-column styleClass="col-button">
+                                    <ng-template let-role="rowData" pTemplate="body">
+                                        <a [routerLink]="['/admin/addrole',role.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+                                        <a (click)="deleteRole(role)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
+                                    </ng-template>
+                                </p-column>
+                            </p-dataTable>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+
+    </div>
+    <!-- end row -->
+</div>
+
+<div bsModal #confirmationModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" (click)="hideConfirmation()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title semi-bold" align="center">{{ 'COMMON.CONFIRMATION' | translate }}</h4>
+            </div>
+            <div class="modal-body">
+                {{ 'COMMON.AREUSUREDELETE' | translate }}
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom" (click)="confirmDeleteUser()">{{ 'COMMON.YES' | translate }}</button>
+                <button type="button" class="btn btn-custom" (click)="hideConfirmation()" data-dismiss="modal">{{ 'COMMON.NO' | translate }}</button>
+            </div>
+        </div>
+    </div>
+</div>

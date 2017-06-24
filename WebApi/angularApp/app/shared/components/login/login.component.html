@@ -1,0 +1,64 @@
+﻿
+<div id="page-container">
+    <!-- begin login -->
+    <div class="login login-with-news-feed">
+        <!-- begin news-feed -->
+        <div class="news-feed">
+            <div class="news-image">
+                <img src="/assets/bg-7.jpg" data-id="login-cover-image" alt="" />
+            </div>
+            <div class="news-caption">
+                <h4 class="caption-title"><i class="fa fa-diamond text-success"></i> {{ 'PROJECT.NAME' | translate }}</h4>
+                <p>
+                    {{ 'PROJECT.DESCR' | translate }}
+                </p>
+            </div>
+        </div>
+        <!-- end news-feed -->
+        <!-- begin right-content -->
+        <div class="right-content">
+            <!-- begin login-header -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> {{ 'PROJECT.NAME' | translate }}
+                    <small>{{ 'PROJECT.DESCR' | translate }}</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in"></i>
+                </div>
+            </div>
+            <!-- end login-header -->
+            <!-- begin login-content -->
+            <div class="login-content">
+                <form class="margin-bottom-0" [formGroup]="loginForm" (submit)="Login(loginForm.value)">
+                    <div class="form-group m-b-15">
+                        <input type="text" class="form-control input-lg" formControlName="Email" placeholder="{{ 'USER.EMAIL' | translate }}" />
+                        <control-messages [control]="loginForm.controls.Email"></control-messages>
+                    </div>
+                    <div class="form-group m-b-15">
+                        <input type="password" class="form-control input-lg" formControlName="Password" placeholder="{{ 'USER.PASSWORD' | translate }}" />
+                        <control-messages [control]="loginForm.controls.Password"></control-messages>
+                    </div>
+                    <div class="checkbox m-b-30">
+                        <label>
+                            <input type="checkbox" name="rememberMe" /> {{ 'LOGIN.REME' | translate }}
+                        </label>
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success btn-block btn-lg">{{ 'LOGIN.SIGNIN' | translate }}</button>
+                    </div>
+                    <div class="m-t-20 m-b-40 p-b-40">
+                        {{ 'LOGIN.NOTMEM' | translate }} {{ 'LOGIN.CLICK' | translate }} <a routerLink="/register" class="text-success">{{ 'LOGIN.HERE' | translate }}</a> {{ 'LOGIN.TOREG' | translate }}.
+                    </div>
+                    <hr />
+                    <p class="text-center text-inverse">
+                        {{ 'PROJECT.COPY' | translate }}
+                    </p>
+                </form>
+            </div>
+            <!-- end login-content -->
+        </div>
+        <!-- end right-container -->
+    </div>
+</div>
+<ng2-toasty [position]="'bottom-center'"></ng2-toasty>
