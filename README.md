@@ -9,10 +9,6 @@ This Example's basic focus is, realtime implementation of the Angular code, I ha
 * Language Support 
 * Use of shared module
 
-Default Login :
-
-user: admin
-password: admin
 
 ## Getting Started
 
@@ -24,6 +20,7 @@ https://github.com/nitin27may/AngularWebApi.git
 ### Prerequisites
 
 Latest Nodejs  and NPM
+
 Command for check version of node and npm (if installed)
 ```
 node -v 
