@@ -23,7 +23,7 @@ https://github.com/nitin27may/AngularWebApi.git
 
 ### Prerequisites
 
-Latest Nodejs and NPM
+Latest Nodejs  and NPM
 Command for check version of node and npm (if installed)
 ```
 node -v 
@@ -32,29 +32,39 @@ npm -v
 
 ### Installing
 
-Change connection string details in your config files
+Folder Structure:
 
-Add user name and password for sending Email for reset password.
+![Folder Structure](https://github.com/nitin27may/Repository/blob/master/Images/FolderStructure.png)
+1. Change connection string details in your config files (For SQL Server)
+![configUpdate](https://github.com/nitin27may/Repository/blob/master/Images/WebConfigUpdate.png)
 
-Install below Visual Studio Extension for Webpack Task runner
+2. Add user name and password for sending Email for reset password. (In web Config)
 
-https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner
-
-Navigate to WebApi folder
+3. Update seed data for login if you want to changes username and password for login in ![UpdateSeedData](https://github.com/nitin27may/Repository/blob/master/Images/UpdateSeedData.png)
 
 
-And run below commands in order to run the App
+
+4. Install below Visual Studio Extension for Webpack Task run (It will help to run Application in debug mode)
+
+    https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner
+
+5. Navigate to WebApi folder And run below commands in order to run the App
 
 ```
 npm install
 ```
 
-And for running the App
+6. And for running the App
 
 ```
 npm start
 ```
 
+7. Run Visual Studio
+
+8. Make sure that server base url is same on which port visual studio is working (Or where the service is hosted) in below file 
+
+![ServerUrlChange](https://github.com/nitin27may/Repository/blob/master/Images/ServerBaseUrl.png)
 ## Built With
 
 * [Angular](https://angular.io/) - The web framework used
