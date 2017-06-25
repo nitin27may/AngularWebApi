@@ -1,8 +1,8 @@
 ﻿{
   "PROJECT": {
-    "NAME": "Bhagavati Manav Kalyan Sangthan",
-    "DESCR": "Bhagavati Manav Kalyan Sangthan Application for Event Management.",
-    "COPY": "© Bhagavati Manav Kalyan Sangthan All Right Reserved 2017"
+    "NAME": "Angular Web Api",
+    "DESCR": "Angular Starter Project with Entity Framework and Web Api.",
+    "COPY": "© Nitin Singh All Right Reserved 2017"
   },
   "USER": {
     "USER": "User",
