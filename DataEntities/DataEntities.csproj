@@ -54,10 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ManagePassword.cs" />
-    <Compile Include="Migrations\201706232139485_initial.cs" />
-    <Compile Include="Migrations\201706232139485_initial.Designer.cs">
-      <DependentUpon>201706232139485_initial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Role.cs" />
@@ -72,11 +68,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706232139485_initial.resx">
-      <DependentUpon>201706232139485_initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

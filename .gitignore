@@ -10,8 +10,8 @@
 /WebApi/bin
 /WebApi/obj
 /packages
-/DataEntities/bin
-/DataEntities/obj
+/Repositiories/bin
+/Repositiories/obj
 
 # IDEs and editors
 /.idea
@@ -36,3 +36,10 @@
 
 /WebApi/angularApp/**/*.js
 /WebApi/angularApp/**/*.map
+/.vs
+/DataEntities/bin/Debug
+/DataEntities/obj/Debug
+/WebApi/assets
+/WebApi/dist
+/WebApi/WebApi.csproj.user
+/WebApi/index.html

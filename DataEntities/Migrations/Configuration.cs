@@ -29,7 +29,7 @@ namespace DataEntities.Migrations
             context.SaveChanges();
 
             context.User.AddOrUpdate(p => p.FirstName,
-               new User() { FirstName = "Nitin", LastName = "Singh", Email = "nitin27may@gmail.com", Password = ManagePassword.ComputeHash("Sh@kti009", "SHA512", null), Status = true, RoleId = context.Role.First(x => x.Name == "Super Admin").Id });
+               new User() { FirstName = "Nitin", LastName = "Singh", Email = "admin@sampleapp.in", Password = ManagePassword.ComputeHash("Password", "SHA512", null), Status = true, RoleId = context.Role.First(x => x.Name == "Super Admin").Id });
             context.SaveChanges();
 
         }
