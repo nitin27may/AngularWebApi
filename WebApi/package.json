@@ -1,5 +1,5 @@
 {
-  "name": "angular-webpack-visualstudio",
+  "name": "angular-webpack-webapi",
   "version": "1.0.0",
   "description": "An Angular VS template",
   "main": "wwwroot/index.html",
@@ -7,7 +7,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/damienbod/Angular2WebpackVisualStudio.git"
+    "url": "https://github.com/nitin27may/AngularWebApi.git"
   },
   "scripts": {
     "ngc": "ngc -p ./tsconfig-aot.json",
