@@ -1,7 +1,7 @@
-﻿{
+{
   "PROJECT": {
-    "NAME": "Angular Web Api",
-    "DESCR": "Angular Starter Project with Entity Framework and Web Api.",
+    "NAME": "Angular Starter",
+    "DESCR": "Angular Starter Project with Webpack.",
     "COPY": "© Nitin Singh All Right Reserved 2017"
   },
   "USER": {
@@ -44,7 +44,12 @@
     "AREUSUREDELETE": "Are you sure? You want to delete this record?",
     "YES": "Yes",
     "NO": "No",
-    "CONFIRMATION": "Confirmation"
+    "CONFIRMATION": "Confirmation",
+    "ENGLISH":"English",
+    "FRENCH":"French"
+  },
+  "PAGE":{
+    "LOGIN":"Login"
   },
   "VALIDATOR": {
     "REQUIRED": "This field is required."

@@ -41,7 +41,7 @@
                     </div>
                     <div class="checkbox m-b-30">
                         <label>
-                            <input type="checkbox" name="rememberMe" /> {{ 'LOGIN.REME' | translate }}
+                            <input type="checkbox" formControlName="RememberMe" /> {{ 'LOGIN.REME' | translate }}
                         </label>
                     </div>
                     <div class="login-buttons">
@@ -53,6 +53,10 @@
                     <hr />
                     <p class="text-center text-inverse">
                         {{ 'PROJECT.COPY' | translate }}
+                        <select formControlName="language" name="language" (change)="selectLanguage($event.target.value)">
+                                <option value="fr">{{ 'COMMON.FRENCH' | translate }}</option>
+                                <option value="en">{{ 'COMMON.ENGLISH' | translate }}</option>
+                        </select>
                     </p>
                 </form>
             </div>

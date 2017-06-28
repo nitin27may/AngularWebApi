@@ -1,7 +1,58 @@
 ﻿{
-  "HOME": {
-    "TITLE": "Bonjour Angular 2 avec ngx-translate !",
-    "SELECT": "Changer la langue"
+  "PROJECT": {
+    "NAME": "Fr Angular Starter",
+    "DESCR": "Fr Angular Starter Project with Webpack.",
+    "COPY": "© Nitin Singh All Right Reserved 2017"
   },
-  "LAZY": "Je suis chargé de façon asynchrone (lazy load)!"
+  "USER": {
+    "USER": "User",
+    "FNAME": "First Name",
+    "LNAME": "Last Name",
+    "EMAIL": "Email /User Name",
+    "USERNAME": "User Name",
+    "PASSWORD": "Password",
+    "MOBILE": "Mobile",
+    "ROLE": "Role",
+    "STATUS": "Status"
+  },
+  "ROLE": {
+    "NAME": "Role Name"
+  },
+  "EVENT": {
+    "NAME": "Event Name",
+    "ORGANIZER": "Organizer Name",
+    "TYPE": "Event Type"
+  },
+  "LOGIN": {
+    "REME": "Remember me",
+    "SIGNIN": "Sign me in",
+    "NOTMEM": "Not a member yet?",
+    "CLICK": "Click",
+    "HERE": "here",
+    "TOREG": "to register"
+  },
+  "COMMON": {
+    "ENTERALL": "Enter all required fields.",
+    "ADD": "Add",
+    "EDIT": "Edit",
+    "SAVE": "Save",
+    "UPDATE": "Update",
+    "DETAILS": "Details",
+    "ADDSUSCESS": "Added Successfully!",
+    "UPSUCCESS": "Updated Successfully!",
+    "DELSUCCESS": "Deleted Successfully!",
+    "AREUSUREDELETE": "Are you sure? You want to delete this record?",
+    "YES": "Yes",
+    "NO": "No",
+    "CONFIRMATION": "Confirmation",
+    "ENGLISH":"English",
+    "FRENCH":"French"
+  },
+    "PAGE":{
+    "LOGIN":"Fr Login"
+  },
+  "VALIDATOR": {
+    "REQUIRED": "This field is required."
+  },
+  "LAZY": "I'm lazy loaded!"
 }

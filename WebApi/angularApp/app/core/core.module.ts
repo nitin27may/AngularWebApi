@@ -7,6 +7,7 @@ import { ValidationService } from '../shared/services/validation.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Configuration } from '../app.constants';
+import { BrowserModule,Title } from '@angular/platform-browser';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ export class CoreModule {
                 CustomToasterService,
                 ValidationService,
                 AuthGuard,
-                Configuration
+                Configuration,
+                Title
             ]
         };
     }
