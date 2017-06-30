@@ -29,7 +29,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="FirstName">{{'USER.FNAME'|translate}}:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="FirstName" placeholder="First Name" />
-                                        <control-messages [control]="userForm.controls.FirstName"></control-messages>
+                                        <validation-messages [control]="userForm.controls.FirstName"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="LastName">{{'USER.LNAME'|translate}}:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="LastName" id="LastName" placeholder="Last Name" />
-                                        <control-messages [control]="userForm.controls.LastName"></control-messages>
+                                        <validation-messages [control]="userForm.controls.LastName"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="Email">{{'USER.EMAIL'|translate}} :</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="email" formControlName="Email" id="Email" placeholder="Email" />
-                                        <control-messages [control]="userForm.controls.Email"></control-messages>
+                                        <validation-messages [control]="userForm.controls.Email"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="Password">{{'USER.PASSWORD'|translate}} :</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="password" formControlName="Password" id="Password" placeholder="Password" />
-                                        <control-messages [control]="userForm.controls.Password"></control-messages>
+                                        <validation-messages [control]="userForm.controls.Password"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="fullname">{{'USER.MOBILE'|translate}} :</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="Mobile" id="Mobile" placeholder="Mobile" />
-                                        <control-messages [control]="userForm.controls.Mobile"></control-messages>
+                                        <validation-messages [control]="userForm.controls.Mobile"></validation-messages>
                                     </div>
                                 </div>
                             </div>

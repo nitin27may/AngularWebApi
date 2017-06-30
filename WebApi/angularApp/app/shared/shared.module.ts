@@ -1,7 +1,7 @@
 import { CustomFooterComponent } from './components/customfooter/customfooter.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SidebarComponent } from './components/sidebar/siderbar.component';
-import { ControlMessagesComponent } from './components/validation/control-message.component';
+import { ValidationMessagesComponent } from './components/validation/validation-message.component';
 import { RouterModule } from '@angular/router';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,7 +44,7 @@ export function createTranslateLoader(http: Http) {
         NavigationComponent,
         CustomFooterComponent,
         SidebarComponent,
-        ControlMessagesComponent
+        ValidationMessagesComponent
     ],
 
     exports: [
@@ -54,7 +54,7 @@ export function createTranslateLoader(http: Http) {
         CustomFooterComponent,
         SidebarComponent,
         NKDatetimeModule,
-        ControlMessagesComponent,
+        ValidationMessagesComponent,
         ToastyModule,
         ModalModule,
         DataTableModule,

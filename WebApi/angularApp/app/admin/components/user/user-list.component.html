@@ -24,7 +24,7 @@
                 <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
                     <div class="row">
                         <div class="col-md-12">
-                            <a role="button" [routerLink]="['/admin/adduser','']" class="btn btn-primary pull-right">Add User</a>
+                            <a role="button" [routerLink]="['/admin/adduser']" class="btn btn-primary pull-right">Add User</a>
                             </div>
                         </div>
                             <div class="row">
@@ -42,7 +42,7 @@
                                         <p-column field="Status" header="Status" [sortable]="true"></p-column>
                                         <p-column styleClass="col-button">
                                             <ng-template let-user="rowData" pTemplate="body">
-                                                <a [routerLink]="['/admin/adduser',user.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+                                                <a [routerLink]="['/admin/edituser',user.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
                                         <a (click)="deleteUser(user)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
                                             </ng-template>
                                         </p-column>

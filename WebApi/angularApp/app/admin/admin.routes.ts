@@ -24,17 +24,27 @@ const routes: Routes = [
                         canActivate: [AuthGuard]
                     },
                     {
-                        path: 'adduser/:id',
+                        path: 'adduser',
+                        component: UserAddComponent,
+                        canActivate: [AuthGuard]
+                    },
+                    {
+                        path: 'edituser/:id',
                         component: UserAddComponent,
                         canActivate: [AuthGuard]
                     },
                     {
                         path: 'roles',
+                        component: RoleListComponent,
+                        canActivate: [AuthGuard]
+                    },
+                    {
+                        path: 'addrole',
                         component: RoleAddComponent,
                         canActivate: [AuthGuard]
                     },
                     {
-                        path: 'addrole/:id',
+                        path: 'editrole/:id',
                         component: RoleAddComponent,
                         canActivate: [AuthGuard]
                     },
@@ -43,8 +53,13 @@ const routes: Routes = [
                         component: EventListComponent,
                         canActivate: [AuthGuard]
                     },
+                     {
+                        path: 'addevent',
+                        component: EventAddComponent,
+                        //canActivate: [AuthGuard]
+                    },
                     {
-                        path: 'addevent/:id',
+                        path: 'editevent/:id',
                         component: EventAddComponent,
                         //canActivate: [AuthGuard]
                     }

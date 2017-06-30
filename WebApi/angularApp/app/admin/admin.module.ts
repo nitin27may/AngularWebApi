@@ -14,8 +14,6 @@ import { RoleAddComponent } from './components/role/role-add.component';
 import { EventListComponent } from './components/events/event-list.component';
 import { EventAddComponent } from './components/events/event-add.component';
 
-import { DateTimePickerModule } from 'ng-pick-datetime';
-
 
 @NgModule({
     imports: [
@@ -23,8 +21,7 @@ import { DateTimePickerModule } from 'ng-pick-datetime';
         //FormsModule,
         HttpModule,
         AdminRoutes,
-        SharedModule,
-        DateTimePickerModule 
+        SharedModule
     ],
 
     declarations: [

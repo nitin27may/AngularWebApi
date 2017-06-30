@@ -24,7 +24,7 @@
                 <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
                     <div class="row">
                         <div class="col-md-12">
-                            <a role="button" [routerLink]="['/admin/addrole','']" class="btn btn-primary pull-right">Add Role</a>
+                            <a role="button" [routerLink]="['/admin/addrole']" class="btn btn-primary pull-right">Add Role</a>
                         </div>
                     </div>
                     <div class="row">
@@ -39,7 +39,7 @@
                                 <p-column field="Name" header="Role Name" [sortable]="true"></p-column>
                                 <p-column styleClass="col-button">
                                     <ng-template let-role="rowData" pTemplate="body">
-                                        <a [routerLink]="['/admin/addrole',role.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+                                        <a [routerLink]="['/admin/editrole',role.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
                                         <a (click)="deleteRole(role)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
                                     </ng-template>
                                 </p-column>

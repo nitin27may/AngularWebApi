@@ -14,7 +14,7 @@
                 </p>
             </div>
         </div>
-        <!-- end news-feed -->
+        <!-- end news-feed --> 
         <!-- begin right-content -->
         <div class="right-content">
             <!-- begin login-header -->
@@ -33,11 +33,11 @@
                 <form class="margin-bottom-0" [formGroup]="loginForm" (submit)="Login(loginForm.value)">
                     <div class="form-group m-b-15">
                         <input type="text" class="form-control input-lg" formControlName="Email" placeholder="{{ 'USER.EMAIL' | translate }}" />
-                        <control-messages [control]="loginForm.controls.Email"></control-messages>
+                        <validation-messages [control]="loginForm.controls.Email"></validation-messages>
                     </div>
                     <div class="form-group m-b-15">
                         <input type="password" class="form-control input-lg" formControlName="Password" placeholder="{{ 'USER.PASSWORD' | translate }}" />
-                        <control-messages [control]="loginForm.controls.Password"></control-messages>
+                        <validation-messages [control]="loginForm.controls.Password"></validation-messages>
                     </div>
                     <div class="checkbox m-b-30">
                         <label>

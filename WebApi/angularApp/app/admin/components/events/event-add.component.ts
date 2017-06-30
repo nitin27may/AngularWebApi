@@ -46,6 +46,7 @@ export class EventAddComponent implements OnInit {
 
    
     GetEvent(id: any) {
+         this.loaderService.changePage(true);
         this.apiService.GetEvent(id).subscribe(
             data => {
                 data.EventStartTime = new Date(data.EventStartTime);

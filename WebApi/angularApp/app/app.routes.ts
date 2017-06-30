@@ -6,7 +6,7 @@ import { ResetComponent } from './shared/components/reset/reset.component';
 import { ForgetComponent } from './shared/components/reset/forget.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'admin/events', pathMatch: 'full' },
 
     {
         path: 'login', component: LoginComponent

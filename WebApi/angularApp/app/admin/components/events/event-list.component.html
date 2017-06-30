@@ -24,7 +24,7 @@
                 <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
                     <div class="row">
                         <div class="col-md-12">
-                            <a Event="button" [routerLink]="['/admin/addEvent','']" class="btn btn-primary pull-right">Add Event</a>
+                            <a Event="button" [routerLink]="['/admin/addevent']" class="btn btn-primary pull-right">Add Event</a>
                         </div>
                     </div>
                     <div class="row">
@@ -53,7 +53,7 @@
 
                                 <p-column styleClass="col-button">
                                     <ng-template let-eventDetail="rowData" pTemplate="body">
-                                        <a [routerLink]="['/admin/addevent',eventDetail.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+                                        <a [routerLink]="['/admin/editevent',eventDetail.Id]"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
                                         <a (click)="deleteEvent(eventDetail)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
                                     </ng-template>
                                 </p-column>

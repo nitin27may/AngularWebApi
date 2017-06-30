@@ -1,12 +1,12 @@
 ﻿<div id="content" class="content">
     <!-- begin breadcrumb -->
     <ol class="breadcrumb pull-right">
-        <li><a [routerLink]="['/admin/roles']">Roles</a></li>
-        <li><a href="javascript:;">Add Role</a></li>
+        <li><a [routerLink]="['/admin/events']">Events</a></li>
+        <li><a href="javascript:;">{{Id ? ('COMMON.UPDATE'|translate): ('COMMON.ADD'|translate)}} {{'EVENT.EVENT'|translate}}</a></li>
     </ol>
     <!-- end breadcrumb -->
     <!-- begin page-header -->
-    <h1 class="page-header">{{Id ? ('COMMON.UPDATE'|translate): ('COMMON.ADD'|translate)}} {{'USER.USER'|translate}}<small> {{'COMMON.ENTERALL'|translate}}.</small></h1>
+    <h1 class="page-header">{{Id ? ('COMMON.UPDATE'|translate): ('COMMON.ADD'|translate)}} {{'EVENT.EVENT'|translate}}<small> {{'COMMON.ENTERALL'|translate}}.</small></h1>
     <!-- end page-header -->
     <!-- begin row -->
     <div class="row">
@@ -19,7 +19,7 @@
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" (click)="exapnd =!exapnd"><i class="fa fa-expand"></i></a>
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" (click)="show =!show"><i class="fa fa-minus"></i></a>
                     </div>
-                    <h4 class="panel-title">{{Id ? ('COMMON.UPDATE'|translate): ('COMMON.ADD'|translate)}} {{'USER.USER'|translate}} {{'COMMON.DETAILS'|translate}}</h4>
+                    <h4 class="panel-title">{{Id ? ('COMMON.UPDATE'|translate): ('COMMON.ADD'|translate)}} {{'EVENT.EVENT'|translate}} {{'COMMON.DETAILS'|translate}}</h4>
                 </div>
                 <div class="panel-body panel-form" [ngClass]="{'active': show,'deactive': !show}">
                     <form class="form-horizontal form-bordered" [formGroup]="eventForm" (submit)="saveEvent(eventForm.value)">
@@ -28,8 +28,8 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-4" for="Name">{{'EVENT.NAME'|translate}}:</label>
                                     <div class="col-md-8 col-sm-8">
-                                        <input class="form-control" type="text" formControlName="Name" placeholder="Role Name" />
-                                        <control-messages [control]="eventForm.controls.Name"></control-messages>
+                                        <input class="form-control" type="text" formControlName="Name" placeholder="Event Name" />
+                                        <validation-messages [control]="eventForm.controls.Name"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="Orgnizer">{{'EVENT.ORGANIZER'|translate}}:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="Orgnizer" placeholder="Orgnizer" />
-                                        <control-messages [control]="eventForm.controls.Orgnizer"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.Orgnizer"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="Name">Event Type:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="EventType" placeholder="Event Type" />
-                                        <control-messages [control]="eventForm.controls.EventType"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.EventType"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     <label class="control-label col-md-4 col-sm-4" for="Orgnizer">Status:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="Status" placeholder="Status" />
-                                        <control-messages [control]="eventForm.controls.Status"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.Status"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                     <label class="control-label col-md-4 col-sm-4">Address:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="Address" placeholder="Address" />
-                                        <control-messages [control]="eventForm.controls.Address"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.Address"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                                     <label class="control-label col-md-4 col-sm-4">City:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="City" placeholder="City" />
-                                        <control-messages [control]="eventForm.controls.City"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.City"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                     <label class="control-label col-md-4 col-sm-4">State:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="State" placeholder="State" />
-                                        <control-messages [control]="eventForm.controls.State"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.State"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                                     <label class="control-label col-md-4 col-sm-4">Country:</label>
                                     <div class="col-md-8 col-sm-8">
                                         <input class="form-control" type="text" formControlName="Country" placeholder="Country" />
-                                        <control-messages [control]="eventForm.controls.Country"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.Country"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                                     <label class="control-label col-md-2 col-sm-2">Event Start Time:</label>
                                     <div id="eventStartTime" class="col-md-10 col-sm-10">
                                         <datetime style="float:left"  formControlName="EventStartTime"  [(datepicker)]="datepickerOpts" [timepicker]="lossTimepciker"></datetime>
-                                        <control-messages [control]="eventForm.controls.EventStartTime"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.EventStartTime"></validation-messages>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                                     <label class="control-label col-md-2 col-sm-2">Event End Time:</label>
                                     <div class="col-md-10 col-sm-10">
                                         <datetime formControlName="EventEndTime" [(datepicker)]="datepickerOpts" [timepicker]="lossTimepciker"></datetime>
-                                        <control-messages [control]="eventForm.controls.EventEndTime"></control-messages>
+                                        <validation-messages [control]="eventForm.controls.EventEndTime"></validation-messages>
                                     </div>
                                 </div>
                             </div>

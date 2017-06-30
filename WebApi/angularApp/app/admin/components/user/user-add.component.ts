@@ -45,6 +45,7 @@ export class UserAddComponent implements OnInit {
     }
 
     GetUser(id: any) {
+          this.loaderService.changePage(true);
         this.apiService.GetUser(id).subscribe(
             data => {
                 this.loaderService.changePage(false);

@@ -19,6 +19,7 @@
     "NAME": "Role Name"
   },
   "EVENT": {
+    "EVENT":"Event",
     "NAME": "Event Name",
     "ORGANIZER": "Organizer Name",
     "TYPE": "Event Type"

@@ -19,6 +19,7 @@
     "NAME": "Role Name"
   },
   "EVENT": {
+     "EVENT":"Event",
     "NAME": "Event Name",
     "ORGANIZER": "Organizer Name",
     "TYPE": "Event Type"
@@ -45,8 +46,8 @@
     "YES": "Yes",
     "NO": "No",
     "CONFIRMATION": "Confirmation",
-    "ENGLISH":"English",
-    "FRENCH":"French"
+    "ENGLISH":"Fr English",
+    "FRENCH":"Fr French"
   },
     "PAGE":{
     "LOGIN":"Fr Login"

@@ -55,8 +55,13 @@ export class LoginComponent implements OnInit {
         private storageService: StorageService) {
         translate.addLangs(["en", "fr"]);
         translate.setDefaultLang('en');
-        let browserLang: string = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+        if(this.storageService.get(StorageType.local, "language")){
+            translate.use(this.storageService.get(StorageType.local, "language"));
+        }else{
+            let browserLang: string = translate.getBrowserLang();
+            translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+        }
+        
 
     }
     Login(user: any) {
