@@ -1,7 +1,7 @@
 {
   "PROJECT": {
-    "NAME": "Angular Starter",
-    "DESCR": "Angular Starter Project with Webpack.",
+    "NAME": "एगुलर स्टार्टर",
+    "DESCR": "एगुलर स्टार्टर Project with Webpack.",
     "COPY": "© Nitin Singh All Right Reserved 2017"
   },
   "USER": {
@@ -46,9 +46,9 @@
     "YES": "Yes",
     "NO": "No",
     "CONFIRMATION": "Confirmation",
-    "ENGLISH":"English",
-    "FRENCH":"French",
-    "HINDI":"Hindi"
+    "ENGLISH":"अंग्रेज़ी",
+    "FRENCH":"फ्रेंच",
+    "HINDI":"हिंदी"
   },
   "PAGE":{
     "LOGIN":"Login"
